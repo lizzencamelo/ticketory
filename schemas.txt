@@ -1,0 +1,10 @@
+Event {event_id, venue_id, date, time, category}
+Sport {event_id, game_id, game_name, sport_name, team_id} :- Find out the different games, by teams and date and time, venue.
+--team{game_id,team_id, team_name}
+Concert{event_id, artist_id, concert_id, concert_name}:- Find out different concerts, by different artists, by genre and date and time, venue.
+--artist{concert_id, artist_id, artist_name, genre}
+
+Venue{venue_id, venue_name, capacity, location}
+Ticket{event_id, ticket_id, ticket_holder_id, status, price}
+
+User{user_id, username, password, email, fname, lname, phno}
