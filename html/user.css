@@ -6,7 +6,7 @@
 }
 
 .header2 {
-  min-height: 60vh;
+  min-height: 100vh;
   background: #009FFF;
 background: linear-gradient(to right, #ec2F4B, #009FFF);
   color: white;

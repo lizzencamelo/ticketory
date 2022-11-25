@@ -2,38 +2,41 @@
 <html>
     <head>
         <title>Ticketmaster</title>
-        <link href="home.css" rel="stylesheet" type="text/css" >
+        <link href="common.css" rel="stylesheet" type="text/css" >
+        <link href="user.css" rel="stylesheet" type="text/css" >
     </head>
     
     <body style="background-color:black;">
       <div class="menu">  
         <div class="header" >
-          <a href="#default" class="logo">Ticketmaster</a>
+          <a href="home.html" class="logo">Ticketmaster</a>
           <div class="header-center">
-            <a class="active" href="#home" >Concerts</a>
-            <a href="#contact">Sports</a>
+            <a class="active" href="concert-search.html" >Concerts</a>
+            <a href="sport-search.html">Sports</a>
           </div>
           <div class="header-right">
             <a href="#about">Sign In</a>
           </div>
         </div>
-         <div class="container" id="child" >
-            <img src="concert.jpeg" alt="" />
-            <p class="title">card title</p>
-            <div class="overlay">
-                <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget diam mauris adipiscing vitae auctor purus.</p>
-            </div>
-            <div class="button"><a href="#"> BUTTON </a></div>
-          </div>
-          <div class="container" id="child" style="margin-left: 3px;">
-            <img src="sport.jpeg" alt="" />
-            <p class="title">card title</p>
-            <div class="overlay">
-                <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget diam mauris adipiscing vitae auctor purus.</p>
-            </div>
-            <div class="button"><a href="#"> BUTTON </a></div>
-          </div>
-      </div>
+
+        <div class="user">
+        <section class="profile">
+            <header class="header2">
+              <div class="details">
+                <img src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=b38c22a46932485790a3f52c61fcbe5a" alt="John Doe" class="profile-pic">
+                <h1 class="heading">Claire Doe</h1>
+                <div class="location">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12 ,2Z"></path>
+          </svg>
+                  <p>Kochi, India</p>
+                </div>
+                
+              </div>
+            </header>
+          </section>
+        </div>  
+
         <footer class="site-footer" style="background-color:black;">
             <div style="text-align:center;" >
                 <div class="container2" id="child">

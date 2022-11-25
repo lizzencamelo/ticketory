@@ -1,0 +1,34 @@
+/* .more-info{
+    background-color: aqua;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.info-container{
+    background: orange;
+    width: 80%;
+    height: 75%;
+    position:absolute;
+    top: 18%;
+    left: 15%;
+    margin: -50px 0 0 -50px;
+    flex-direction: row;
+}
+.img-child{
+    background-image: url("home.jpeg");
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 50%;
+    display: flex;
+}
+
+.content-child{
+    height: 100vh;
+    width: 50%;
+    position: relative;
+    display:contents;
+    justify-content: right;
+} */
