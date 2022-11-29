@@ -11,11 +11,17 @@
 
    // Execute SQL statement 
    $result = mysqli_query($conn, $sql);
+   if (!$result) {
+      $response = array("success" => false, "message" => "Something went wrong!");
+      echo json_encode($response);
+      return;
+  }
 
    // Get number of rows returned 
    $row_count = mysqli_num_rows($result);
    if (!$row_count) {
-      echo "<script>alert('Invalid password or email.');</script>";
+      $response = array("success" => false, "message" => "Login failed! Invalid email or password.");
+      echo json_encode($response);
       return;
    }
   
@@ -25,5 +31,8 @@
    $_SESSION['full_name'] = $row['full_name'];
    $_SESSION['email'] = $row['email'];
 
+   
+   $response = array("success" => true, "message" => "Login successful!");
+   echo json_encode($response);
    mysqli_close($conn);
 ?>

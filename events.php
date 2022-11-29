@@ -23,7 +23,6 @@
         echo "Sorry! We do not have any events listed currently.";
         return;
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -36,21 +35,84 @@
     <?php
         include "include/all_links.php";
     ?>
+    <link href="css/events.css" rel="stylesheet" type="text/css" >
 </head>
 <body>
     <?php 
         include "include/header.php";   
     ?>
+    
+    
+    <div class="main"> 
+        <ul class="cards">
+
+        <?php
+            foreach ($events as $event) {
+                if ($event_category == 'concerts') {
+                    $event_images = glob("img/concerts/".$event['artist_id']."/*");
+                } else {
+                    $event_images = glob("img/sports/".$event['event_id']."/*");
+                }
+        ?>
+
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="<?= $event_images[1] ?>"></div>
+                <div class="card_content">
+                    <h2 class="card_title"><?= ($event_category == 'concerts') ? $event['concert_name'] : $event['game_name']. " | ".$event['sport_name'] ?></h2>
+                    <p class="card_text event-date"><?= $event['date'] ?></p>
+                    <p class="card_text event-time"><?= $event['time'] ?></p>
+                    
+                    <?php
+                        $venue_id = $event['venue_id'];
+                        $sql2 = "SELECT * FROM venues WHERE venue_id = $venue_id";
+                        $result2 = mysqli_query($conn, $sql2);
+                        if(!$result2) {
+                            echo "Something went wrong";
+                            return;
+                        }
+                        $venue = mysqli_fetch_assoc($result2);
+                    ?>
+                    <p class="venue-name"><?= $venue['venue_name'] ?></p>
+                    <p class="venue-location"><?= $venue['location'] ?></p>
+                <div>
+                    <button class="btn card_btn"><a href="event_detail.php?event_category=<?= $event_category ?>&event_id=<?= $event['event_id']?>">Read More</a></button>
+            </div>
+        </li>
+        <?php
+                }
+        ?>
+
+        </ul>
+    </div>
+
+        <?php
+            if (count($events) == 0) 
+            {
+        ?>
+        <div>
+            <p>No events hanppening.</p>
+        </div>
+        <?php
+            }
+        ?>
 
     <?php
-        foreach ($events as $event) {
-            if ($event_category == 'concerts') {
-                $event_image = glob("img/events/concerts/".$event['event_id']."/*");
-            } else {
-                $event_image = glob("img/events/sports/".$event['event_id']."/*");
-            }
+            include "include/signup_modal.php";
+            include "include/login_modal.php";
+            include "include/footer.php"; 
     ?>
-    <div class="event-id-<?= $event['event_id'] ?>"> 
+     
+     <?php
+        // foreach ($events as $event) {
+        //     if ($event_category == 'concerts') {
+        //         $event_images = glob("img/events/concerts/".$event['artist_id']."/*");
+        //     } else {
+        //         $event_images = glob("img/events/sports/".$event['event_id']."/*");
+        //     }
+    ?>
+
+    <!-- <div class="event-id-<?= $event['event_id'] ?>"> 
         <img src="<?= '$event_image[0]' ?>" />
         <div>
             <div class="event-name"><?= ($event_category == 'concerts') ? $event['concert_name'] : $event['game_name']. " | ".$event['sport_name'] ?></div>
@@ -74,17 +136,17 @@
                 <a href="event_detail.php?event_category=<?= $event_category ?>&event_id=<?= $event['event_id']?>">View</a>
             </div>
         </div>
-    </div>
+    </div> -->
     <?php
-        }
-        if (count($events) == 0) 
-        {
+        // }
+        // if (count($events) == 0) 
+        // {
     ?>
-        <div>
+        <!-- <div>
             <p>No events hanppening.</p>
-        </div>
+        </div> -->
     <?php
-        }
-    ?>
+      //  }
+    ?> 
 </body>
 </html>

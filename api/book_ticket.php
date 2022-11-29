@@ -16,7 +16,7 @@
    $quantity = $_GET['ticket-quantity'];
    
    // SQL query to get event details
-   $sql1 = "SELECT * FROM '$event_category' WHERE event_id='$event_id'";
+   $sql1 = "SELECT * FROM ".$event_category." WHERE event_id='$event_id'";
    $result1 = mysqli_query($conn, $sql1);
    if(!$result1) {
       echo "Something went wrong!";

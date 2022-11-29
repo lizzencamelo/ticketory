@@ -1,5 +1,5 @@
-window.onload = function () {
-    var signup_form = document.getElementById("signup_form");
+window.addEventListener("load", function () {
+    var signup_form = document.getElementById("signup-form");
     signup_form.addEventListener("submit", function (event) {
         var XHR = new XMLHttpRequest();
         var form_data = new FormData(signup_form);
@@ -15,7 +15,7 @@ window.onload = function () {
         event.preventDefault();
     });
 
-    var login_form = document.getElementById("login_form");
+    var login_form = document.getElementById("login-form");
     login_form.addEventListener("submit", function (event) {
         var XHR = new XMLHttpRequest();
         var form_data = new FormData(login_form);
@@ -30,22 +30,22 @@ window.onload = function () {
 
         event.preventDefault();
     });
-};
+});
 
 var signup_success = (event) => {
     var response = JSON.parse(event.target.responseText);
     if (response.success) {
         alert(response.message);
         window.location.href = "home.php";
-        console.log(window.location.href);
     } else {
         alert (response.message);
     }
 };
 
 var login_success = (event) => {
+    console.log(event.target.responseText);
     var response = JSON.parse(event.target.responseText);
-    if (response.success) {
+        if (response.success) {
         location.reload();
     } else {
         alert (response.message);

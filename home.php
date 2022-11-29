@@ -12,28 +12,36 @@
     <?php
         include "include/all_links.php";
     ?>
+    <link href="css/home.css" rel="stylesheet" type="text/css" >
 </head>
 <body>
-
     <?php 
         include "include/header.php";   
     ?>
-    <!-- Include header file -->
-     <?php
+
+    <?php
             include "include/signup_modal.php";
             include "include/login_modal.php";
             include "include/footer.php"; 
     ?>
 
-    <div>
-        <a href="events.php?event_category=concerts">
-            Concerts
-        </a>
-    </div>
-    <div>
-        <a href="events.php?event_category=sports">
-            Sports
-        </a>
+    <div class="landing-container">
+        <div class="container-item concert-container">
+            <p class="title">card title</p>
+            <div class="overlay">
+                <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget diam mauris adipiscing vitae auctor purus.</p>
+            </div>
+            <div class="button"><a href="events.php?event_category=concerts"> Explore Concerts </a></div>
+        </div>
+        
+        <div class="container-item sport-container"> 
+            <p class="title">card title</p>
+            <div class="overlay">
+                <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget diam mauris adipiscing vitae auctor purus.</p>
+            </div>
+            <div class="button"><a href="events.php?event_category=sports"> Explore Games </a></div>
+        </div> 
+
     </div>
 
 </body>

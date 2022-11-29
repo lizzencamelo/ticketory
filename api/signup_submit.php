@@ -35,5 +35,6 @@
     // Success response on sign up
     $response = array("success" => true, "message" => "Account successfully created!");
     echo json_encode($response);
-    mysqli_close($conn);
+   mysqli_close($conn);
+   header("location: ../home.php");
 ?>
