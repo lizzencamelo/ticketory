@@ -1,24 +1,24 @@
 .landing-container {
+    position: relative;
     min-height: 100vh;
     display: flex;
     flex-direction: row;
 }
+
 .container-item{
-    /* background-color: rgb(255, 193, 127); */
     height: 100vh;
     width: 50%;
-    position: relative;
-    
+    position: relative;    
     background-size: cover;
     background-position: center;
 }
 
 .sport-container {
-    background-image: url('../html/sport.jpeg');
+    background-image: url('../img/sport3.jpg');
 }
 
 .concert-container {
-    background-image: url('../html/concert.jpeg');
+    background-image: url('../img/concert3.jpg');
 }
 
   .overlay {
@@ -73,7 +73,7 @@
     top: 200px;
   }
   
-  .button {
+  .glass-button-container {
     position: absolute;
     width: 500px;
     left:40px;
@@ -83,15 +83,30 @@
     transition: opacity .35s ease;
   }
   
-  .button a {
-    width: 200px;
-    padding: 12px 48px;
-    text-align: center;
-    color: white;
-    border: solid 2px white;
-    z-index: 1;
-  }
-  
-  .container-item:hover .button {
+  .container-item:hover .glass-button-container {
     opacity: 1;
   }
+
+  .glass-button {
+    display: inline-block;
+    padding: 24px 32px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    outline: none;
+    backdrop-filter: blur(30px);
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  .glass-button:hover {
+    background-color: rgba(201, 92, 240, 0.3);
+    color: #fff;
+    text-decoration: none
+  }
+  

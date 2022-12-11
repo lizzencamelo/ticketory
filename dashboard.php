@@ -44,8 +44,7 @@
     //             INNER JOIN sports e 
     //             ON t.event_id = e.event_id
     //             WHERE t.ticket_holder_id = $user_id";
-    // $result3 = mysqli_query($conn, $sql3);
-
+    // $result3 = mysqli_query($conn,$sql3);
     // $sport_tickets = mysqli_fetch_all($result3, MYSQLI_ASSOC);
 
 ?>
@@ -76,7 +75,7 @@
                     <img src="<?= $concert_images[0] ?>" alt="">
                     <div class="ticket-id">Ticket ID: <?= $concert_ticket['ticket_id'] ?></div>
                     <?php   
-                        //  $event_id = $concert_ticket['event_id'];
+                        $event_id = $concert_ticket['event_id'];
                         //  $sql4 = "SELECT * FROM concerts WHERE event_id = $event_id";
                         //  $result4 = mysqli_query($conn, $sql4);
                         //  if(!$result4) {

@@ -1,132 +1,60 @@
-* {box-sizing: border-box;
+  * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
     }
 
-    body { 
-      margin: 0;
-      background-color: black;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+  body { 
+    margin: 0;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
     
-/*HEADER*/
-    .header {
-      position: flex;
-      overflow: hidden;
-      background-color: transparent;
-      padding: 20px 10px;
-    }
-    
-    .header a {
-      float: left;
-      color: white;
-      text-align: center;
-      padding: 12px;
-      text-decoration: none;
-      font-size: 18px; 
-      line-height: 25px;
-      border-radius: 4px;
-    }
-    
-    .header a.logo {
-      font-size: 25px;
-      font-weight: bold;
-    }
-    
-    .header a:hover {
-      color: #fff;
-      text-shadow:
-        /* White glow */
-        0 0 1px #fff,
-        0 0 3px #fff,
-        0 0 4px #fff,
-       0 0 42px rgb(201, 92, 240),
-        0 0 82px rgb(201, 92, 240),
-        0 0 92px rgb(201, 92, 240),
-        0 0 102px rgb(201, 92, 240),
-        0 0 151px rgb(201, 92, 240); 
-    }
-    
-    #neonText {
-      color: #fff;
-      text-shadow:
-        /* White glow */
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        /* Green glow */
-        0 0 42px rgb(201, 92, 240),
-        0 0 82px rgb(201, 92, 240),
-        0 0 92px rgb(201, 92, 240),
-        0 0 102px rgb(201, 92, 240),
-        0 0 151px rgb(201, 92, 240);
-    }
+  /*HEADER*/
+ .header {
+  margin: 12px 0 0 0;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+   position: absolute;
+   z-index: 1;
+   background-color: transparent;
+   padding: 20px 10px;
+   width: 100vw;
+  }
+ 
+ .header a {
+   color: white;
+   text-align: center;
+   padding: 12px;
+   text-decoration: none;
+   font-size: 18px; 
+   line-height: 25px;
+   border-radius: 4px;
+   overflow-x: hidden;
+ }
+ 
+ .header a.logo {
+   font-size: 25px;
+   font-weight: bold;
+ }
+ 
+ .header .welcome-user {
+    color: #fff;
+    font-weight: bold;
+ }
 
-    .header a.active {
-      /*background-color: dodgerblue;*/
-      color: #fff;
-    }
-    
-    .header-right {
-      float: right;
-      position: sticky;
-    }
 
-    .header-center {
-      position: sticky;
-    }
-    
-    @media screen and (max-width: 500px) {
-      .header a {
-        float: none;
-        display: block;
-        text-align: left;
-      }
-      
-      .header-right {
-        float: none;
-      }
-    }
-
-/*FOOTER*/
-.site-footer
-{
-  background-color:#000000;
-  padding:0 0 20px;
-  font-size:15px;
-  line-height:24px;
-  color:#737373;
-  
-}
-.site-footer hr
-{
-  border-top-color:#bbb;
-  opacity:0.5
-}
-.site-footer hr.small
-{
-  margin:20px 0
-}
-.site-footer h6
-{
-  color:#fff;
-  font-size:16px;
-  text-transform:uppercase;
-  margin-top:0px;
-  letter-spacing:2px;
-  padding-top: 0px;
-  margin-bottom: 0px;
-}
-.site-footer a
-{
-  color:#737373;
-}
-.site-footer a:hover
-{
-  color:#3366cc;
-  text-decoration:none;
-}
-.copyright-text
-{
-  margin:0
+ .header a:hover {
+  color: #fff;
+  text-shadow:
+    /* White glow */
+    0 0 2px #fff,
+    0 0 3px #fff,
+    0 0 4px #fff,
+    0 0 100px rgb(201, 92, 240),
+    0 0 200px rgb(201, 92, 240),
+    0 0 200px rgb(201, 92, 240),
+    0 0 200px rgb(201, 92, 240),
+    0 0 250px rgb(201, 92, 240); 
 }

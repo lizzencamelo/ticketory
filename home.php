@@ -27,21 +27,20 @@
 
     <div class="landing-container">
         <div class="container-item concert-container">
-            <p class="title">card title</p>
+            <p class="title">CONCERTS</p>
             <div class="overlay">
-                <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget diam mauris adipiscing vitae auctor purus.</p>
+                <p class="para"></p>
             </div>
-            <div class="button"><a href="events.php?event_category=concerts"> Explore Concerts </a></div>
+            <div class="glass-button-container"><a class="glass-button" href="events.php?event_category=concerts"> Explore Concerts </a></div>
         </div>
         
         <div class="container-item sport-container"> 
-            <p class="title">card title</p>
+            <p class="title">SPORTS</p>
             <div class="overlay">
-                <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget diam mauris adipiscing vitae auctor purus.</p>
+                <p class="para"></p>
             </div>
-            <div class="button"><a href="events.php?event_category=sports"> Explore Games </a></div>
+            <div class="glass-button-container"><a class="glass-button"  href="events.php?event_category=sports"> Explore Games </a></div>
         </div> 
-
     </div>
 
 </body>

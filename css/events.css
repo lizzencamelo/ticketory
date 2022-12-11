@@ -8,7 +8,7 @@
 
 
 .body-search {
-  color: #272727;
+  color: #353535;
   font-family: 'Quicksand', serif;
   font-style: normal;
   font-weight: 400;
@@ -90,7 +90,7 @@ img {
   }
 .card_content {
   padding: 1rem;
-  background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+  background: linear-gradient(to bottom right, #9628da 40%, #e777de 100%);
 }
 
 .card_title {
