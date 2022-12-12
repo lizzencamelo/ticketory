@@ -21,7 +21,7 @@
         //  Header displayed when user is logged in. 
         } else {
     ?>
-    <div class="row">
+    <div class="row logged-in">
         <div class="col-sm-6">
             <p class="welcome-user">  Hi, <?= $_SESSION["full_name"] ?></p>        
         </div>

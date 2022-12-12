@@ -1,14 +1,11 @@
 <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="signup-heading" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="signup-heading">Signup with Ticketmaster</h5>
+                <div class="modal-body">
+                    <h5 class="modal-title" id="signup-heading">Signup with Ticketmaster</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                </div>
-
-                <div class="modal-body">
                     <form id="signup-form" class="form" role="form" method="post" action="api/signup_submit.php">
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
@@ -50,9 +47,6 @@
                             <button type="submit" class="btn btn-block btn-primary">Create Account</button>
                         </div>
                     </form>
-                </div>
-
-                <div class="modal-footer">
                     <span>Already have an account?
                         <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#login-modal">Login</a>
                     </span>

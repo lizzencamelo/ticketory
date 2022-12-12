@@ -1,0 +1,49 @@
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Monoton&display=swap');
+
+.event-detail-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    
+    background-color: #ffffff33;
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 70vw;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.event-image {
+    width: 50%;
+    border-radius: 15px;
+}
+
+.event-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.event-details {
+    padding: 2rem;
+}
+
+.event-name {
+    font-family: 'Rubik 80s Fade', cursive;
+    font-size: 2rem;
+}
+
+.event-date {
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 1.2rem;
+}

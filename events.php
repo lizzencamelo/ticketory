@@ -7,9 +7,9 @@
     $event_category = $_GET["event_category"];
 
     if ($event_category == 'concerts') {
-        $sql1 = "SELECT * FROM concerts";
+        $sql1 = "SELECT * FROM concerts ORDER BY date";
     } else {
-        $sql1 = "SELECT * FROM sports";
+        $sql1 = "SELECT * FROM sports ORDER BY date";
     }
 
     $result1 = mysqli_query($conn, $sql1);
@@ -31,7 +31,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events</title>
+    <title>Events | Ticketory</title>
     <?php
         include "include/all_links.php";
     ?>
@@ -41,52 +41,40 @@
     <?php 
         include "include/header.php";   
     ?>
-    
-    
-    <div class="main"> 
-        <ul class="cards">
+    <marquee class="marquee" behavior="scroll" direction="left">&#9734; ticketory &#9734; SHOP MILLIONS OF LIVE EVENTS AND DISCOVER CAN'T MISS CONCERTS, GAMES, THEATRE AND MORE. &#9734; ticketory &#9734;</marquee>
 
-        <?php
-            foreach ($events as $event) {
-                if ($event_category == 'concerts') {
-                    $event_images = glob("img/concerts/".$event['artist_id']."/*");
-                } else {
-                    $event_images = glob("img/sports/".$event['event_id']."/*");
-                }
+    <?php
+            if ($event_category == 'concerts') {
+                $event_image = glob("img/event_concert3.jpg");
         ?>
-
-        <li class="cards_item">
-            <div class="card">
-                <div class="card_image"><img src="<?= $event_images[1] ?>"></div>
-                <div class="card_content">
-                    <h2 class="card_title"><?= ($event_category == 'concerts') ? $event['concert_name'] : $event['game_name']. " | ".$event['sport_name'] ?></h2>
-                    <p class="card_text event-date"><?= $event['date'] ?></p>
-                    <p class="card_text event-time"><?= $event['time'] ?></p>
-                    
-                    <?php
-                        $venue_id = $event['venue_id'];
-                        $sql2 = "SELECT * FROM venues WHERE venue_id = $venue_id";
-                        $result2 = mysqli_query($conn, $sql2);
-                        if(!$result2) {
-                            echo "Something went wrong";
-                            return;
-                        }
-                        $venue = mysqli_fetch_assoc($result2);
-                    ?>
-                    <p class="venue-name"><?= $venue['venue_name'] ?></p>
-                    <p class="venue-location"><?= $venue['location'] ?></p>
-                <div>
-                    <button class="btn card_btn"><a href="event_detail.php?event_category=<?= $event_category ?>&event_id=<?= $event['event_id']?>">Read More</a></button>
-            </div>
-        </li>
-        <?php
-                }
-        ?>
-
-        </ul>
+        
+    <div class="event-landing-container">
+        <h1 class="landing-caption"><span style="letter-spacing:0.4rem;">experience</span> 
+                                    <span style="background-color:#E5B8F4;color:#2D033B;padding:0 3rem;"> LIFE. </span> <br/>
+                                     Be part of a <i>musical <br/>
+                                     history</i>.</h1>
+        <div class="event-landing-image">
+            <img src="<?= $event_image[0] ?>" alt="" >
+        </div>
     </div>
-
         <?php
+            } else {
+                $event_image = glob("img/event_sport.jpg");
+        ?>
+        <div class="event-landing-container">
+            <h1 class="landing-caption">for an <i> extraordinary <br />
+                                        experience</i>.<br/> 
+                                        Live your <span style="font-size:3.5rem;">TRUEST</span><br/>
+                                        Fan Moment.</h1>
+            <div class="event-landing-image">
+                <img src="<?= $event_image[0] ?>" alt="" >
+            </div>
+            <?php
+                }
+            ?>
+        </div>
+    </div>
+    <?php
             if (count($events) == 0) 
             {
         ?>
@@ -96,57 +84,44 @@
         <?php
             }
         ?>
+    
+            
+        <div class="container my-5">
+            <div class="row">
 
+            <?php
+                foreach ($events as $event) {
+                    if ($event_category == 'concerts') {
+                        $event_images = glob("img/concerts/".$event['artist_id']."/*");
+                    } else {
+                        $event_images = glob("img/sports/".$event['event_id']."/*");
+                    }
+            ?>
+            
+                <div class="col-md-4">
+                    <div class="content">
+                        <div class="image-container">
+                            <img src="<?= $event_images[1] ?>" alt="" />
+                        </div>                         
+                        <div class="content-container">
+                            <h1 class="concert-name f9"><?= ($event_category == 'concerts') ? $event['concert_name'] : $event['game_name']. " | ".$event['sport_name'] ?></h1>
+                            <p><span  class="date f7"><?= $event['date'] ?>  | </span> <span class="time f7"><?= $event['time'] ?></span></p>
+                            <div>
+                                <a class="view-button f7" href="event_detail.php?event_category=<?= $event_category ?>&event_id=<?= $event['event_id']?>">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <?php
+                            }
+                    ?>  
+                </div>
+            </div>
     <?php
             include "include/signup_modal.php";
             include "include/login_modal.php";
             include "include/footer.php"; 
     ?>
      
-     <?php
-        // foreach ($events as $event) {
-        //     if ($event_category == 'concerts') {
-        //         $event_images = glob("img/events/concerts/".$event['artist_id']."/*");
-        //     } else {
-        //         $event_images = glob("img/events/sports/".$event['event_id']."/*");
-        //     }
-    ?>
-
-    <!-- <div class="event-id-<?= $event['event_id'] ?>"> 
-        <img src="<?= '$event_image[0]' ?>" />
-        <div>
-            <div class="event-name"><?= ($event_category == 'concerts') ? $event['concert_name'] : $event['game_name']. " | ".$event['sport_name'] ?></div>
-            <div class="event-date"><?= $event['date'] ?></div>
-            <div class="event-time"><?= $event['time'] ?></div>
-
-            <?php
-                $venue_id = $event['venue_id'];
-                $sql2 = "SELECT * FROM venues WHERE venue_id = $venue_id";
-                $result2 = mysqli_query($conn, $sql2);
-                if(!$result2) {
-                    echo "Something went wrong";
-                    return;
-                }
-                $venue = mysqli_fetch_assoc($result2);
-            ?>
-
-            <div class="venue-name"><?= $venue['venue_name'] ?></div>
-            <div class="venue-location"><?= $venue['location'] ?></div>
-            <div>
-                <a href="event_detail.php?event_category=<?= $event_category ?>&event_id=<?= $event['event_id']?>">View</a>
-            </div>
-        </div>
-    </div> -->
-    <?php
-        // }
-        // if (count($events) == 0) 
-        // {
-    ?>
-        <!-- <div>
-            <p>No events hanppening.</p>
-        </div> -->
-    <?php
-      //  }
-    ?> 
 </body>
 </html>

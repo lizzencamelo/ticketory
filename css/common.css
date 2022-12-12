@@ -1,3 +1,13 @@
+  
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Lekton:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+
+/*
+    font-family: 'La Belle Aurore', cursive;
+    font-family: 'Lekton', sans-serif; 
+
+*/
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -7,15 +17,22 @@
 
   body { 
     margin: 0;
-    background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #141215;
+    color: white;
   }
+
+  /*SELECTION*/
+  ::selection {
+    background-color: #E5B8F4;
+    color: #2D033B;
+}
     
   /*HEADER*/
  .header {
-  margin: 12px 0 0 0;
-  border-top: 1px solid #efefef;
-  border-bottom: 1px solid #efefef;
+   font-family: 'Lekton', sans-serif; 
+   margin: 12px 0 0 0;
+   border-top: 1px solid #efefef;
+   border-bottom: 1px solid #efefef;
    position: absolute;
    z-index: 1;
    background-color: transparent;
@@ -45,7 +62,8 @@
  }
 
 
- .header a:hover {
+ .header a:hover,
+ .header a:active {
   color: #fff;
   text-shadow:
     /* White glow */
@@ -57,4 +75,58 @@
     0 0 200px rgb(201, 92, 240),
     0 0 200px rgb(201, 92, 240),
     0 0 250px rgb(201, 92, 240); 
+}
+
+.logged-in {
+  height:26px;
+}
+
+.welcome-user {
+  font-weight: 700;
+}
+
+/* BUTTONS */
+
+
+.view-button,
+.submit-button {
+  display: block;
+  width: 40%;
+  margin: 1rem auto;
+  background-color: transparent;
+  padding: 0.5rem 2rem;
+  border: 1px solid #ffffff;
+  color: #ffffff; 
+  font-size: 0.7rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.view-button:hover,
+.submit-button:hover {
+  text-decoration: none;
+  color: #141215; 
+  background-color: #ffffff;
+}
+
+/* LOGIN AND SIGNUP MODALS */
+.modal-content {
+  border-radius: 15px;
+}
+
+.modal-body {
+
+  background-image: url('../img/modal1.png');
+}
+
+.modal-body input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+.input-group-text {
+  background-color: transparent;
+  border: none;
 }

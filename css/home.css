@@ -18,7 +18,7 @@
 }
 
 .concert-container {
-    background-image: url('../img/concert3.jpg');
+    background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/concert3.jpg');
 }
 
   .overlay {
@@ -28,20 +28,12 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0);
-    transition: background 0.5s ease;
   }
   
   .container-item:hover .overlay {
     display: block;
     background: rgba(70, 27, 78, 0.8);
   }
-  
-  /*img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-  }*/
   
   .title {
     position: absolute;

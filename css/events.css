@@ -1,117 +1,145 @@
-/* Font */
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
-
-/* Design */
-*{
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wire+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Expanded&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
+.f1 {
+  font-family: 'Tangerine', cursive;
+}
+.f2 {
+  font-family: 'Bungee Inline', cursive;
+}
+.f3 {
+  font-family: 'Londrina Outline', cursive;
+}
+.f4 {
+  font-family: 'Libre Barcode 39 Extended Text', cursive;
+}
+.f5 {
+  font-family: 'Wire One', sans-serif;
+}
+.f6 {
+  font-family: 'Libre Barcode 128', cursive;
+}
+.f7 {
+  font-family: 'Anonymous Pro', monospace;
+}
+.f8 {
+  font-family: 'Uncial Antiqua', cursive;
+}
+.f9 {
+  font-family: 'Stint Ultra Expanded', cursive;
+}
+.f10 {
+  font-family: 'Zen Tokyo Zoo', cursive;
+}
+.f11 {
+  font-family: 'Holtwood One SC', serif;
+}
+* {
   box-sizing: border-box;
 }
 
-
-.body-search {
-  color: #353535;
-  font-family: 'Quicksand', serif;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
-  padding: 1rem;
+body {
+  overflow-x: hidden;
 }
 
-.main{
-  max-width: 1200px;
-  margin: 0 auto;
+/*MARQUEE TEXT*/
+.marquee {
+  margin-top: 5rem;
+  font-size: 1rem;
+  font-family: 'Cutive', serif;
 }
 
-h1 {
-    font-size: 24px;
-    font-weight: 400;
-    text-align: center;
+@media (max-width: 800px) {
+  .marquee {
+  margin-top: 10rem;
+}
 }
 
-img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
+/*EVENT LANDING*/
+.event-landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  padding-bottom: 5rem;
 }
 
-.btn {
-  color: #ffffff;
-  padding: 0.8rem;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-weight: 400;
-  display: block;
+.landing-caption {
+  font-family: 'Eczar', serif; 
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+
+.event-landing-image {
+  margin-top: 2rem;
+  width: 50vw;
+  height: 80vh;
+}
+
+.event-landing-image img {
+  height: 100%;
   width: 100%;
-  cursor: pointer;
+  object-fit: cover;
+}
+
+/*CARDS*/
+.content {
+  min-height: 450px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
-}
-
-.btn:hover {
-  background-color: rgba(255, 255, 255, 0.12);
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.cards_item {
-  display: flex;
-  padding: 1rem;
-}
-
-@media (min-width: 40rem) {
-  .cards_item {
-    width: 50%;
-  }
-}
-
-@media (min-width: 56rem) {
-  .cards_item {
-    width: 33.3333%;
-  }
-}
-
-.card {
-  background-color: white;
-  border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
 }
-.card:hover {
+.content:hover {
     transform: scale(1.03);
   }
-.card_content {
-  padding: 1rem;
-  background: linear-gradient(to bottom right, #9628da 40%, #e777de 100%);
+
+
+
+.image-container {
+  height: 250px;
 }
 
-.card_title {
-  color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-  margin: 0px;
+.image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
-.card_text {
-  color: #ffffff;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;    
-  font-weight: 400;
+.content-container  {
+  padding: 0.6rem 1rem;
 }
-.made_by{
-  font-weight: 400;
-  font-size: 13px;
-  margin-top: 35px;
-  text-align: center;
+
+.content-container p {
+  margin-bottom: 0;
 }
+
+.concert-name {
+  font-size: 1.4rem;
+}
+
+.date {
+  font-size: 1.7rem;
+}
+
+.time {
+
+}
+
