@@ -18,7 +18,7 @@ An event booking database management system.
 &nbsp;
 ```Visual Studio Code```
 
-## Built by 
+## Developed by
 
 **Lizzen Camelo**   
 [![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/lizzencamelo)
@@ -58,3 +58,7 @@ An event booking database management system.
          Start apache and mysql server in xampp
          Create database and import sql file in database folder
          Open browser and enter localhost/ticketmaster/home.php
+         
+         
+  
+## Logo designed by Ligia Camelo
