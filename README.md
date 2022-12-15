@@ -29,6 +29,10 @@ An event booking database management system.
 **Flannan Ferrao**  
 [![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/flannanferrao)
 
+  
+## Logo designed by
+**Ligia Camelo**
+
 ## UI
 
 ### Home Page
@@ -59,6 +63,3 @@ An event booking database management system.
          Create database and import sql file in database folder
          Open browser and enter localhost/ticketmaster/home.php
          
-         
-  
-## Logo designed by Ligia Camelo
