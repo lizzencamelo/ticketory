@@ -50,26 +50,27 @@
   }
   
   .container-item:hover .title {
-    top: 180px;
+    top: 25%;
   }
 
-  .para{
+  .container-text {
+    position: absolute;
     display:none;
   }
-  .container-item:hover .para {
+
+  .container-item:hover .container-text {
     color: white;
-    display:flex;
+    display: block;
     width: 500px;
-    margin-left: 40px;
-    margin-top: 100px;
-    top: 200px;
+    top: 35%;
+    left: 40px;
   }
   
   .glass-button-container {
     position: absolute;
     width: 500px;
     left:40px;
-    top: 300px;
+    top: 50%;
     text-align: left;
     opacity: 0;
     transition: opacity .35s ease;
@@ -97,7 +98,7 @@
   }
 
   .glass-button:hover {
-    background-color: rgba(201, 92, 240, 0.3);
+    background-color: transparent;
     color: #fff;
     text-decoration: none
   }

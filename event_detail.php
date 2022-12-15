@@ -64,6 +64,10 @@
     <link href="css/event_detail.css" rel="stylesheet">
 </head>
 <body>
+    
+    <?php 
+        include "include/header.php";   
+    ?>
 
     <div class="event-detail-container">
             <div class="row main">
@@ -118,6 +122,11 @@
                 </div>
             </div>
     </div>
+  
+    <?php
+            include "include/signup_modal.php";
+            include "include/login_modal.php";
+    ?>
 
     <script src="js/event_detail.js" type="text/javascript"></script>
 </body>

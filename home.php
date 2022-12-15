@@ -28,7 +28,7 @@
         <div class="container-item concert-container">
             <p class="title">CONCERTS</p>
             <div class="overlay">
-                <p class="para"></p>
+                <p class="container-text">Dance with the rhythm, immersed in the melody. Check out upcoming concerts of your favourite artist on Ticketory.</p>
             </div>
             <div class="glass-button-container"><a class="glass-button" href="events.php?event_category=concerts"> Explore Concerts </a></div>
         </div>
@@ -36,7 +36,7 @@
         <div class="container-item sport-container"> 
             <p class="title">SPORTS</p>
             <div class="overlay">
-                <p class="para"></p>
+                <p class="container-text">Feel the adrenaline as you cheer your dream team live in the arena! Find tickets for your dream match.</p>
             </div>
             <div class="glass-button-container"><a class="glass-button"  href="events.php?event_category=sports"> Explore Games </a></div>
         </div> 

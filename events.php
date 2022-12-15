@@ -93,21 +93,29 @@
                 foreach ($events as $event) {
                     if ($event_category == 'concerts') {
                         $event_images = glob("img/concerts/".$event['artist_id']."/*");
+            ?>
+                <div class="col-md-3">
+            <?php
                     } else {
                         $event_images = glob("img/sports/".$event['event_id']."/*");
-                    }
             ?>
-            
                 <div class="col-md-4">
+
+            <?php
+                    }
+            ?>            
                     <div class="content">
                         <div class="image-container">
                             <img src="<?= $event_images[1] ?>" alt="" />
-                        </div>                         
+                        </div>                   
                         <div class="content-container">
-                            <h1 class="concert-name f9"><?= ($event_category == 'concerts') ? $event['concert_name'] : $event['game_name']. " | ".$event['sport_name'] ?></h1>
-                            <p><span  class="date f7"><?= $event['date'] ?>  | </span> <span class="time f7"><?= $event['time'] ?></span></p>
-                            <div>
-                                <a class="view-button f7" href="event_detail.php?event_category=<?= $event_category ?>&event_id=<?= $event['event_id']?>">Read More</a>
+                            <h1 class="concert-name"><?= ($event_category == 'concerts') ? $event['concert_name'] : $event['game_name']. " | ".$event['sport_name'] ?></h1>
+                            <div class="flex flex-row align-content-space-between">                                
+                                <span  class="date"><?= $event['date'] ?>  </span> 
+                                <span class="time"><?= $event['time'] ?></span>
+                            </div>
+                            <div class="align-self-center">
+                                <a class="view-button" href="event_detail.php?event_category=<?= $event_category ?>&event_id=<?= $event['event_id']?>">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -117,6 +125,7 @@
                     ?>  
                 </div>
             </div>
+
     <?php
             include "include/signup_modal.php";
             include "include/login_modal.php";

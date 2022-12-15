@@ -63,15 +63,21 @@
     <link href="css/dashboard.css" rel="stylesheet" type="text/css" >
 </head>
 <body>
+    <?php
+        include "include/header.php";
+    ?>
     <div class="user-profile">
         <div class="row user-details">
-            <div class="col-4">
-                <div class="user-profile-pic"><img src="<?= $user_profile[0] ?>"></div>
-            </div>
-            <div class="col-8">
-                <div class="user-name"><?= $user['full_name'] ?></div>
-                <div class="user-email"><?= $user['email'] ?></div>
-                <div class="user-phone"><?= $user['phone_number'] ?></div>
+            <div class="neo">
+                <div class="col-4">
+                    <div class="user-profile-pic"><img src="<?= $user_profile[0] ?>"></div>
+                </div>
+                <div class="col-8">
+                    <div class="user-name"><?= $user['full_name'] ?></div>
+                    <div class="user-email"><?= $user['email'] ?></div>
+                    <div class="user-phone"><?= $user['phone_number'] ?></div>
+                    <div class="social p-2"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div>
+                </div>
             </div>
         </div> 
     </div> 
@@ -112,7 +118,7 @@
 
                     <form id="delete-form" action="" method="POST" >
                         <input type="hidden" name="del_ticket" value="<?= $concert_ticket['ticket_id'] ?>" />
-                        <input class="delete-ticket" type="submit" name="delete" value="" ><span aria-hidden="true">&times;</span>
+                        <input class="delete-ticket" type="submit" name="delete" value="&times;" >
                     </form>
                 </div>
                     
@@ -142,7 +148,7 @@
                     </div>
 
                     <div class="col-md-8 ticket-details">
-                        <div class="event-name"><?= $sport_ticket['sport_name'] ?></div>   
+                        <div class="event-name"><?= $sport_ticket['game_name'] ?></div>   
                         <div class="row mb-4">                                  
                             <div class="col-6">                                
                                 <div class="ticket-id d-flex flex-column"><span class="ticket-tag">Ticket ID:</span><span><?= $sport_ticket['ticket_id'] ?></span></div>
@@ -162,11 +168,11 @@
                             </div>
                         </div>
                     </div>
-
-                    <form id="delete-form" action="api/book_ticket.php" method="POST" >
-                        <input class="delete-ticket" type="submit" name="delete" value="<?= $sport_ticket['ticket_id'] ?>" ><span aria-hidden="true">&times;</span>
+                    
+                    <form id="delete-form" action="" method="POST" >
+                        <input type="hidden" name="del_ticket" value="<?= $sport_ticket['ticket_id'] ?>" />
+                        <input class="delete-ticket" type="submit" name="delete" value="&times;" >
                     </form>
-
                 </div>
                     
         <?php
@@ -183,6 +189,11 @@
         ?>
     </div>
     
-        <script type="text/javascript" src="js/dashboard.js" ></script>
+    <?php
+            include "include/signup_modal.php";
+            include "include/login_modal.php";
+            include "include/footer.php"; 
+    ?>
+    <script type="text/javascript" src="js/dashboard.js" ></script>
 </body>
 </html>

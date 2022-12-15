@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap');
 
+.user-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  width: 100vw;
+  background: linear-gradient(109.8deg, rgb(62, 5, 116) -5.2%, rgb(41, 14, 151) -5.2%, rgb(216, 68, 148) 103.3%);
+}
+
 .user-profile .row{
   width: 60vw;
 }
@@ -8,6 +17,7 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  outline: 3px double #ffffff33;
 }
 
 .user-profile-pic img {
@@ -20,14 +30,41 @@
   background-color: #ffffff20;
   color: rgb(238, 233, 233);
   backdrop-filter: blur(20px);
+  padding:  1rem;
+}
+
+.neo {  
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 15px;
+  background-color: #ffffff33;
   display: flex;
   flex-direction: row;
   justify-content: center;  
-  padding: 2rem 5rem;
+  padding: 1rem 3rem;
 }
 
 .user-name {
   font-size: 2rem;
+  font-family: 'Cantata One', serif;
+}
+
+.user-email,  .user-phone {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.social a {
+  padding: 0.4rem 2rem 0 0;
+}
+
+.social i {
+  font-size: 1.1rem;
+  color: #fff;
+  text-shadow: 3px 3px 6px #ea4c89, -3px -3px 6px #ea4c89, -6px 3px 6px #ea4c89, 3px -3px 6px #ea4c89;
+}
+
+.social a:hover i {
+  text-shadow: 6px 6px 8px #ea4c89, -6px -6px 8px #ea4c89, -8px 6px 8px #ea4c89, 8px -6px 8px #ea4c89;
 }
 
 .concert-tickets,
@@ -36,17 +73,13 @@
     margin-top: 4rem;
 }
 
-.user-profile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-    background: linear-gradient(109.8deg, rgb(62, 5, 116) -5.2%, rgb(41, 14, 151) -5.2%, rgb(216, 68, 148) 103.3%);
-}
-
 .container-title {
     width: 60vw;
     margin: 0 auto 4rem;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .ticket {
@@ -59,7 +92,6 @@
     position: relative;
     margin: 0 auto;
 }
-
 
 .concert-tickets .ticket:last-child,
 .sport-tickets .ticket:last-child {
@@ -85,6 +117,11 @@
 .event-name {
     font-size: 1.5rem;
     text-transform: capitalize;
+    font-family: 'Judson', serif;
+  }
+
+.ticket-id {
+  font-family: 'Martian Mono', monospace;
 }
 
 .ticket-tag {
@@ -93,14 +130,15 @@
 }
 
 .event-date, .event-time {
-    font-size: 1.3rem;
-    font-family: 'Offside', cursive;
+font-family: 'Roboto Mono', monospace;
+font-size: 1rem;
 }
 
 .venue-details {
     text-align: right;
     font-size: 0.6rem;
-}
+    font-family: 'Martian Mono', monospace;
+  }
 
 .ticket-barcode {    
     text-align: right;
@@ -115,6 +153,26 @@
     font-size: 1.6rem;
     color: #fff;
 }
+
+#delete-form input {
+  opacity: 0;
+  background-color: #ffffff33;
+  color: #ffffff;
+  backdrop-filter: blur(8px);
+  padding: 0 0.5rem 0.1rem;
+  border-radius: 5px;
+  border: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.ticket:hover #delete-form input {
+  opacity: 1;
+}
+
+#delete-form input:hover {
+  background-color: #ffffff70;
+}
+
 
 /*NO TICKET BUTTON*/
 .no-ticket {

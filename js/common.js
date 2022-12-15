@@ -34,6 +34,7 @@ window.addEventListener("load", function () {
 
 var signup_success = (event) => {
     var response = JSON.parse(event.target.responseText);
+    console.log(event.target.responseText);
     if (response.success) {
         alert(response.message);
         window.location.href = "home.php";

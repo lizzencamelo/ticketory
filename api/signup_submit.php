@@ -2,7 +2,7 @@
     require("../include/database_connect.php");
 
     $full_name = $_POST['full_name'];
-    $phone_number = $_POST['phone_number'];
+    $phone = $_POST['phone_number'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $password = sha1($password);   
@@ -24,8 +24,7 @@
     }
 
     // SQL Insert Statement 
-    $username  = strtolower($first_name.$last_name);
-    $sql = "INSERT INTO users (full_name, username, phone_number, email, password) VALUES ('$full_name', '$username', '$phone_number', '$email', '$password')";
+    $sql = "INSERT INTO users (full_name, phone_number, email, password) VALUES ('$full_name', '$phone', '$email', '$password')";
     $result = mysqli_query($conn, $sql);
     if (!$result) {
         echo "Something went wrong!";
@@ -36,5 +35,4 @@
     $response = array("success" => true, "message" => "Account successfully created!");
     echo json_encode($response);
    mysqli_close($conn);
-   header("location: ../home.php");
 ?>

@@ -1,4 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Lekton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100&family=Montserrat:wght@300&family=Nunito+Sans:wght@200&family=Roboto+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Crimson+Text&family=Judson&family=Libre+Baskerville&family=Lora&family=Sumana&family=Tinos&display=swap');
+
+.f1 {
+  font-family: 'Martian Mono', monospace;
+}
+
+.f2 {
+font-family: 'Montserrat', sans-serif;
+}
+
+.f3 {  
+font-family: 'Roboto Mono', monospace;
+}
+
+.f4 {
+font-family: 'Nunito Sans', sans-serif;
+}
+
+.f5 {
+  font-family: 'Cantata One', serif;
+}
+
+.f6 {
+  
+font-family: 'Crimson Text', serif;
+}
+
+.f7 {  
+font-family: 'Libre Baskerville', serif;
+}
+
+.f8 {
+  font-family: 'Lora', serif;
+}
+
+.f9 {
+  font-family: 'Sumana', serif;
+}
+
+.f10 {
+font-family: 'Tinos', serif;
+}
+
+.f11 {
+  font-family: 'Judson', serif;
+}
 
   * {
     box-sizing: border-box;
@@ -44,9 +91,8 @@
    overflow-x: hidden;
  }
  
- .header a.logo {
-   font-size: 25px;
-   font-weight: bold;
+ .header a.logo img {
+    width: 150px;
  }
  
  .header .welcome-user {
@@ -79,9 +125,6 @@
 }
 
 /* BUTTONS */
-
-
-.view-button,
 .submit-button {
   display: block;
   width: 40%;
@@ -95,7 +138,6 @@
   text-transform: uppercase;
 }
 
-.view-button:hover,
 .submit-button:hover {
   text-decoration: none;
   color: #141215; 

@@ -24,6 +24,7 @@
 }
 
 .event-name {
+    font-family: 'Judson', serif;
     text-transform: capitalize;
     font-size: 1.5rem;
 }
@@ -31,6 +32,7 @@
 .event-date {
     font-size: 1.2rem;
 }
+
 
 .venue-details {
     text-align: right;
