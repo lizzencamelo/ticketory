@@ -1,16 +1,32 @@
-<!-- <footer class="site-footer">
-        <div style="text-align:center;" >
-            <div class="container2" id="child">
-              <h6>About</h6>
-              <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+  <!-- FOOTER -->
+    <footer class="w-100 py-4 flex-shrink-0">
+        <div class="container py-4">
+            <div class="row gy-4 gx-5">
+                <div class="col-lg-5 col-md-6 align-self-center">
+                    <div class="footer-ticketory text-small"><span>TICKETORY</span></div>
+                </div>
+                <div class="col-lg-2 col-md-6  align-self-center">
+                    <p class="text-white text-small mb-3">EVENTS</p>
+                    <ul class="list-unstyled text-muted text-small">
+                        <li><a href="#">CONCERTS</a></li>
+                        <li><a href="#">SPORTS</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6  align-self-center">
+                    <ul class="list-unstyled text-muted text-small">
+                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">LOGIN</a></li>
+                        <li><a href="#">SIGN UP</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6  align-self-center text-right">
+                <div class="social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div>
+                    <p class="small text-muted">ticketory@events.com</p>
+                </div>
             </div>
-        <hr> 
-            <div height="50px">
-              <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
-           <a href="#">Scanfcode</a>.
-              </p>  
-            </div>
-  </footer> -->
+        </div>
+    </footer>
 <script src="js/jquery.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>   
 <script src="js/common.js" type="text/javascript"></script>

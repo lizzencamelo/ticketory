@@ -49,7 +49,7 @@
         ?>
         
     <div class="event-landing-container">
-        <h1 class="landing-caption"><span style="letter-spacing:0.4rem;">experience</span> 
+        <h1 class="landing-caption"><span style="letter-spacing:0.4rem;">Experience</span> 
                                     <span style="background-color:#E5B8F4;color:#2D033B;padding:0 3rem;"> LIFE. </span> <br/>
                                      Be part of a <i>musical <br/>
                                      history</i>.</h1>

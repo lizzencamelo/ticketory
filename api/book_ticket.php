@@ -83,20 +83,10 @@
 
       header("location: ../dashboard.php");
    }
+
    
-      // Delete ticket from dashboard
-      if(isset($_GET['delete'])) {
-         echo "delete";
-         $ticket_id = $_GET['delete'];
-         $sql6 = "DELETE FROM tickets WHERE ticket_id='$ticket_id'";
-         $result6 = mysqli_query($conn, $sql6);
-         if(!$result6) {
-             echo "Something went wrong!";
-             return;
-         }
-         header("location: ../dashboard.php");
-     }
-    
+   mysqli_close($conn);
+                  
    ?>
 
 

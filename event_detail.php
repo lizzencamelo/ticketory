@@ -66,63 +66,57 @@
 <body>
 
     <div class="event-detail-container">
-        <div class="container">
-            <div class="event-details">
-                <div class="event-name"><?= ($event_category == 'concerts') ? $event_details['concert_name'] : $event_details['game_name'] ?></div>
-                <div class="my-3">
-                    <div class="event-date"><?= $event_details['date'] ?></div>
-                    <div class="event-time"><?= $event_details['time'] ?></div>
+            <div class="row main">
+                <div class="event-details col-md-6">
+                    <div class="event-name"><?= ($event_category == 'concerts') ? $event_details['concert_name'] : $event_details['game_name'] ?></div>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="event-date"><?= $event_details['date'] ?></div>
+                            <div class="event-time"><?= $event_details['time'] ?></div>
+                        </div>
+                    <?php
+                        $venue_id = $event_details['venue_id'];
+                        $sql3 = "SELECT * FROM venues WHERE venue_id = '$venue_id'";
+                        $result3 = mysqli_query($conn, $sql3);
+                        if(!$result3) {
+                            echo "Something went wrong";
+                            return;
+                        }
+                        $venue = mysqli_fetch_assoc($result3);
+                    ?>                    
+                        <div class="col-6">                    
+                            <div class="venue-details  d-flex flex-column"><span class="ticket-tag">VENUE</span><span><?= $venue['venue_name'] ?></span><span><?= $venue['location'] ?></span></div>
+                        </div>
+                    </div>
+                          
+                    <form method="get" action="api/book_ticket.php">
+                        <div class="row mt-5">
+                            <div class="event-price col-12 d-flex flex-column"><span class="ticket-tag">TICKET PRICE</span><span>&#x20B9; <?= $event_details['event_price'] ?></span></div>
+                            <div class="event-quantity mt-3 col-6 d-flex flex-column"><span class="ticket-tag">QUANTITY</span><input type="number" min="1" max="<?=  $event_details['event_capacity'] ?>" id="ticket-quantity" name="ticket-quantity" value="1" oninput="calculateTotalTicketPrice(<?= $event_details['event_price'] ?>)"></div>
+                            <div class="mt-3 col-6 text-right d-flex flex-column"><span class="ticket-tag">TOTAL PRICE</span><span>&#x20B9; <span id="total-price"><?= $event_details['event_price'] ?></span></span></div>
+                        </div>
+                            <?php
+                                $event_capacity = $event_details['event_capacity'];
+                                if($event_capacity == 0) {
+                            ?>
+                            <div class="row mt-4">
+                                <input class="submit-button" type="submit" value="Sold Out" disabled>
+                            </div>
+                            <?php
+                                } else { 
+                            ?>
+                            <div class="row mt-4">
+                                <input class="submit-button" type="submit" value="Book Tickets" id="book-my-ticket">
+                            </div>
+                            <?php
+                                }
+                            ?>
+                    </form>
+                </div>            
+                <div class="event-image col-md-6" >
+                    <img src="<?= $event_images[0] ?>" alt=""/>
                 </div>
-                <?php
-                    $venue_id = $event_details['venue_id'];
-                    $sql3 = "SELECT * FROM venues WHERE venue_id = '$venue_id'";
-                    $result3 = mysqli_query($conn, $sql3);
-                    if(!$result3) {
-                        echo "Something went wrong";
-                        return;
-                    }
-                    $venue = mysqli_fetch_assoc($result3);
-                ?>
-                <div class="venue-name"><?= $venue['venue_name'] ?></div>
-                <div class="venue-location"><?= $venue['location'] ?></div>
-            
-                <?php 
-                    $booked = false;
-                    foreach ($bookings as $booking) {
-                        if($booking['ticket_holder_id'] == $user_id) {
-                            $booked = true;
-                        }
-                    }
-                    if($booked) {
-                ?>
-                    <a href="dashboard.php" >View Your Tickets</a>
-                <?php 
-                    }
-                ?>
-                <form method="get" action="api/book_ticket.php">
-                    <div class="event-price">Ticket Price:<?= $event_details['event_price'] ?></div>
-                    Quantity: <input type="number" min="1" id="ticket-quantity" name="ticket-quantity" value="1" oninput="calculateTotalTicketPrice(<?= $event_details['event_price'] ?>)">
-                    <br>
-                    Total Price:<span id="total-price"><?= $event_details['event_price'] ?></span>
-                    <br>
-                    <?php
-                        $event_capacity = $event_details['event_capacity'];
-                        if($event_capacity == 0) {
-                    ?>
-                        <input type="submit" value="Sold Out" disabled>
-                    <?php
-                        } else { 
-                    ?>
-                        <input class="submit-button" type="submit" value="Book Tickets" id="book-my-ticket">
-                    <?php
-                        }
-                    ?>
-                </form>
-            </div>            
-            <div class="event-image" >
-                <img src="<?= $event_images[0] ?>" alt=""/>
             </div>
-        </div>
     </div>
 
     <script src="js/event_detail.js" type="text/javascript"></script>

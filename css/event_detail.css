@@ -1,29 +1,57 @@
 /*FONTS*/
-@import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Monoton&display=swap');
-
 .event-detail-container {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(0deg, rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('../img/event_detail_bg1.png');
+    background-size: cover;
 }
 
-.container {
-    
+.main {
     background-color: #ffffff33;
     backdrop-filter: blur(20px);
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    width: 70vw;
+    width: 60vw;
     padding: 1rem;
     border-radius: 15px;
+    height: 60vh;
+}
+
+.event-details {
+    height: 100%;    
+    padding: 1.5rem;
+    text-transform: uppercase;
+}
+
+.event-name {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+
+.event-date {
+    font-size: 1.2rem;
+}
+
+.venue-details {
+    text-align: right;
+    font-size: 0.8rem;
+}
+
+.ticket-tag {
+    color: grey;
+    font-size: 0.5rem;
+}
+
+.event-quantity input {
+    width: 70px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #fff;
 }
 
 .event-image {
-    width: 50%;
+    height: 100%;
     border-radius: 15px;
 }
 
@@ -32,18 +60,4 @@
     width: 100%;
     object-fit: cover;
     border-radius: 15px;
-}
-
-.event-details {
-    padding: 2rem;
-}
-
-.event-name {
-    font-family: 'Rubik 80s Fade', cursive;
-    font-size: 2rem;
-}
-
-.event-date {
-    font-family: 'La Belle Aurore', cursive;
-    font-size: 1.2rem;
 }

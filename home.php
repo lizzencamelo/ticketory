@@ -22,7 +22,6 @@
     <?php
             include "include/signup_modal.php";
             include "include/login_modal.php";
-            include "include/footer.php"; 
     ?>
 
     <div class="landing-container">
@@ -42,6 +41,9 @@
             <div class="glass-button-container"><a class="glass-button"  href="events.php?event_category=sports"> Explore Games </a></div>
         </div> 
     </div>
-
+    
+    <?php
+            include "include/footer.php"; 
+    ?>
 </body>
 </html>
