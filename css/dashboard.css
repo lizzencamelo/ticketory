@@ -173,7 +173,6 @@
   background-color: #ffffff70;
 }
 
-
 /*NO TICKET BUTTON*/
 .no-ticket {
     width: 60vw;
@@ -205,6 +204,7 @@
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
+
 .butn::before {
   background: #fff;
   content: "";
@@ -216,6 +216,7 @@
   width: 50px;
   transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
 }
+
 .butn::after {
   background: #fff;
   content: "";
@@ -227,6 +228,7 @@
   transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
   width: 8rem;
 }
+
 .butn__new::before {
   left: -50%;
 }
@@ -251,8 +253,7 @@
   left: 200%;
   opacity: 0.6;
 }
+
 .butn span {
   z-index: 20;
 }
-
-

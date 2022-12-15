@@ -48,6 +48,6 @@
     $response = array("success" => true, "message" => "Delete successful!");
     echo json_encode($response);
 }
- 
 
+   mysqli_close($conn);       
 ?>

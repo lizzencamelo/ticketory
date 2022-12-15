@@ -14,7 +14,6 @@
          </script>';
    }
 
-   
    if(isset($_GET['ticket-quantity'])) {
    // Cookie created to store the category and id of event to book
    // Created when user accesses the event_detail page
@@ -84,9 +83,7 @@
       header("location: ../dashboard.php");
    }
 
-   
-   mysqli_close($conn);
-                  
+   mysqli_close($conn);                  
    ?>
 
 
