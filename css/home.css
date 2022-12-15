@@ -18,7 +18,7 @@
 }
 
 .concert-container {
-    background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/concert3.jpg');
+    background: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('../img/concert3.jpg');
 }
 
   .overlay {
@@ -40,8 +40,10 @@
     width: 500px;
     left: 40px;
     top: 400px;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
     text-align: left;
     text-transform: uppercase;
     color: white;
@@ -54,6 +56,8 @@
   }
 
   .container-text {
+   font-family: 'Judson', serif;
+   font-size: 1.2rem;
     position: absolute;
     display:none;
   }
@@ -70,7 +74,7 @@
     position: absolute;
     width: 500px;
     left:40px;
-    top: 50%;
+    top: 60%;
     text-align: left;
     opacity: 0;
     transition: opacity .35s ease;

@@ -109,9 +109,9 @@
                             <img src="<?= $event_images[1] ?>" alt="" />
                         </div>                   
                         <div class="content-container">
-                            <h1 class="concert-name"><?= ($event_category == 'concerts') ? $event['concert_name'] : $event['game_name']. " | ".$event['sport_name'] ?></h1>
-                            <div class="flex flex-row align-content-space-between">                                
-                                <span  class="date"><?= $event['date'] ?>  </span> 
+                            <h1 class="event-name"><?= ($event_category == 'concerts') ? $event['concert_name'] : $event['game_name']. " | ".$event['sport_name'] ?></h1>
+                            <div class="flex flex-row">                                
+                                <span  class="date"><?= $event['date'] ?> | </span> 
                                 <span class="time"><?= $event['time'] ?></span>
                             </div>
                             <div class="align-self-center">

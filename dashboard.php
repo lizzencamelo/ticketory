@@ -116,7 +116,7 @@
                         </div>
                     </div>
 
-                    <form id="delete-form" action="" method="POST" >
+                    <form id="delete-form" class="delete-form" action="" method="POST" >
                         <input type="hidden" name="del_ticket" value="<?= $concert_ticket['ticket_id'] ?>" />
                         <input class="delete-ticket" type="submit" name="delete" value="&times;" >
                     </form>
@@ -169,7 +169,7 @@
                         </div>
                     </div>
                     
-                    <form id="delete-form" action="" method="POST" >
+                    <form id="delete-form" class="delete-form"  action="" method="POST" >
                         <input type="hidden" name="del_ticket" value="<?= $sport_ticket['ticket_id'] ?>" />
                         <input class="delete-ticket" type="submit" name="delete" value="&times;" >
                     </form>

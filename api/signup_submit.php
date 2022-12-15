@@ -24,9 +24,9 @@
     }
 
     // SQL Insert Statement 
-    $sql = "INSERT INTO users (full_name, phone_number, email, password) VALUES ('$full_name', '$phone', '$email', '$password')";
-    $result = mysqli_query($conn, $sql);
-    if (!$result) {
+    $sql2 = "INSERT INTO users (full_name, phone_number, email, password) VALUES ('$full_name', '$phone', '$email', '$password')";
+    $result2 = mysqli_query($conn, $sql2);
+    if (!$result2) {
         echo "Something went wrong!";
         return;
     }
@@ -34,5 +34,5 @@
     // Success response on sign up
     $response = array("success" => true, "message" => "Account successfully created!");
     echo json_encode($response);
-   mysqli_close($conn);
+    mysqli_close($conn);
 ?>

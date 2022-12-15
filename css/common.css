@@ -85,6 +85,7 @@ font-family: 'Tinos', serif;
    text-align: center;
    padding: 12px;
    text-decoration: none;
+   text-transform: uppercase;
    font-size: 18px; 
    line-height: 25px;
    border-radius: 4px;
@@ -124,26 +125,6 @@ font-family: 'Tinos', serif;
   font-weight: 700;
 }
 
-/* BUTTONS */
-.submit-button {
-  display: block;
-  width: 40%;
-  margin: 1rem auto;
-  background-color: transparent;
-  padding: 0.5rem 2rem;
-  border: 1px solid #ffffff;
-  color: #ffffff; 
-  font-size: 0.7rem;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.submit-button:hover {
-  text-decoration: none;
-  color: #141215; 
-  background-color: #ffffff;
-}
-
 /* LOGIN AND SIGNUP MODALS */
 .modal-content {
   border-radius: 15px;
@@ -175,6 +156,7 @@ font-family: 'Tinos', serif;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #9c9999;
+  color: #fff;
   text-align: center;
 }
 
@@ -210,14 +192,15 @@ font-family: 'Tinos', serif;
 }
 
 .modal-message {
+  font-family: 'Nunito Sans', sans-serif;
   position: absolute;
   bottom: 5%;
   left: 10%;
-  text-transform: uppercase;
 }
 
 .modal-message a:hover {
-  color: #9c9999;
+  color: #fff;
+  font-weight: bold;
 }
 
 .modal-title i {
@@ -258,18 +241,27 @@ font-family: 'Tinos', serif;
 }
 
 /*FOOTER*/
+footer {
+  font-family: 'Roboto Mono', monospace;
+}
+
 .footer-ticketory span {
   border: 1px solid #686666;
   padding: 0.2rem 2rem;
   letter-spacing: 0.5rem;
 }
 
-.footer .social {
-  text-align: right;
+footer .social {
+  margin-bottom: 1rem;
 }
 
 footer .social a {
   padding: 0.2rem 1rem;
+}
+
+
+footer a:hover {
+  color: rgb(169, 165, 165);
 }
 
 .text-small {

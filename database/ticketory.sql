@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2022 at 08:14 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- Generation Time: Dec 15, 2022 at 11:09 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -53,7 +53,7 @@ INSERT INTO `concerts` (`event_id`, `venue_id`, `artist_id`, `concert_name`, `da
 (8, 3, 3, 'The EAGLES: Hotel California', '2023-03-01', '7:00 pm', 1400, 18422),
 (9, 17, 11, 'Ultraviolence', '2023-02-21', '7:00 pm', 1000, 17556),
 (10, 18, 5, 'Bruno Mars Las Vegas ', '2023-01-27', '7:00 pm', 2500, 6367),
-(11, 18, 5, 'Bruno Mars Las Vegas ', '2023-02-01', '7:00 pm', 2500, 6389),
+(11, 18, 5, 'Bruno Mars Las Vegas ', '2023-02-01', '7:00 pm', 2500, 6388),
 (12, 18, 6, 'Maroon 5: The Las Vegas Residency', '2023-03-24', '7:00 pm', 1300, 6393),
 (13, 18, 6, 'Maroon 5: The Las Vegas Residency', '2023-03-25', '7:00 pm', 1300, 6400),
 (14, 18, 6, 'Maroon 5: The Las Vegas Residency', '2023-06-01', '7:30 pm', 1300, 6400),
@@ -61,12 +61,12 @@ INSERT INTO `concerts` (`event_id`, `venue_id`, `artist_id`, `concert_name`, `da
 (16, 19, 7, 'Poptopia ', '2022-12-23', '7:00 pm', 1400, 20355),
 (17, 20, 8, 'Ed Sheeran Tour', '2023-02-10', '7:00 pm', 2850, 65890),
 (18, 21, 8, 'Ed Sheeran Tour', '2023-03-12', '7:30 pm', 2850, 61500),
-(19, 18, 9, 'Lana Del Ray: Born To Die', '2022-12-20', '8:00 pm', 3400, 63980),
+(19, 18, 9, 'Lana Del Ray: Born To Die', '2022-12-20', '8:00 pm', 3400, 63982),
 (20, 8, 10, 'Lana Del Ray: Paradise', '2022-12-21', '8:00 pm', 3400, 79996),
 (21, 16, 10, 'Lana Del Ray: Paradise', '2023-05-19', '8:00 pm', 3400, 67580),
 (22, 16, 10, 'Lana Del Ray: Paradise', '2023-02-19', '8:00 pm', 3400, 67594),
 (23, 16, 11, 'Lana Del Ray: Ultraviolence', '2022-12-27', '8:00 pm', 6500, 67594),
-(24, 16, 10, 'Lana Del Ray: Ultraviolence', '2023-01-27', '8:00 pm', 6500, 67591),
+(24, 16, 10, 'Lana Del Ray: Ultraviolence', '2023-01-27', '8:00 pm', 6500, 67590),
 (25, 16, 10, 'Lana Del Ray: Ultraviolence', '2023-02-27', '8:00 pm', 6500, 67594);
 
 --
@@ -146,12 +146,11 @@ CREATE TABLE `tickets` (
 --
 
 INSERT INTO `tickets` (`ticket_id`, `ticket_holder_id`, `event_category`, `event_id`) VALUES
-(155, 2, 'concerts', 19),
-(156, 2, 'concerts', 19),
-(157, 2, 'concerts', 19),
 (158, 2, 'sports', 1),
 (159, 2, 'sports', 2),
-(160, 2, 'sports', 5);
+(160, 2, 'sports', 5),
+(170, 2, 'concerts', 11),
+(171, 2, 'concerts', 19);
 
 -- --------------------------------------------------------
 
@@ -162,7 +161,7 @@ INSERT INTO `tickets` (`ticket_id`, `ticket_holder_id`, `event_category`, `event
 CREATE TABLE `users` (
   `user_id` int(11) NOT NULL,
   `full_name` varchar(150) NOT NULL,
-  `phone_number` int(10) NOT NULL,
+  `phone_number` varchar(10) NOT NULL,
   `email` varchar(150) NOT NULL,
   `password` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -172,9 +171,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `full_name`, `phone_number`, `email`, `password`) VALUES
-(2, 'Jane', 2147483647, 'janedoe@email.com', 'e1770cefc174d55219edcab48f3c91905eb5bd9b'),
-(8, 'Lui Kim', 2147483647, 'luikim@email.com', 'beb7d4cb6cc02ab5de864b4acdca14380269b04c'),
-(9, 'Ana', 2147483647, 'ana@email.com', '14c5cf010a65e0872bed4549544701783e4f24d6');
+(2, 'Jane', '2147483647', 'janedoe@email.com', 'e1770cefc174d55219edcab48f3c91905eb5bd9b'),
+(13, 'Lui Kim', '7893494373', 'luikim@email.com', 'beb7d4cb6cc02ab5de864b4acdca14380269b04c');
 
 -- --------------------------------------------------------
 
@@ -262,13 +260,13 @@ ALTER TABLE `venues`
 -- AUTO_INCREMENT for table `tickets`
 --
 ALTER TABLE `tickets`
-  MODIFY `ticket_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=167;
+  MODIFY `ticket_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=172;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Constraints for dumped tables

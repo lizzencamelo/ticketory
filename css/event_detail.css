@@ -33,19 +33,27 @@
     font-size: 1.2rem;
 }
 
+.event-date, .event-time {
+    font-family: 'Roboto Mono', monospace;
+}
 
 .venue-details {
     text-align: right;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
+    font-family: 'Martian Mono', monospace;
+}
+
+#booking-details {
+    font-family: 'Martian Mono', monospace;
 }
 
 .ticket-tag {
-    color: grey;
+    color: rgb(169, 165, 165);
     font-size: 0.5rem;
 }
 
 .event-quantity input {
-    width: 70px;
+    width: 100px;
     background-color: transparent;
     outline: none;
     border: none;
@@ -63,3 +71,27 @@
     object-fit: cover;
     border-radius: 15px;
 }
+
+
+/* BUTTONS */
+.submit-button {
+    display: block;
+    margin: 1rem auto;
+    background-color: transparent;
+    padding: 0.5rem 2rem;
+    border: 1px solid #ffffff;
+    color: #ffffff; 
+    font-size: 0.7rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    letter-spacing: 0.3rem; 
+    font-family: 'Martian Mono', monospace;
+    text-transform: uppercase;
+  }
+  
+  .submit-button:hover {
+    background-color: #ffffff33;
+    border: none;
+    color: #fff;
+  }

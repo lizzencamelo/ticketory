@@ -28,7 +28,7 @@
        return;
     }   
     $ticket = mysqli_fetch_assoc($result6); 
-
+    //Update event capacity to increase by 1
     $event_category = $ticket['event_category'];
     $event_id = $ticket['event_id'];
     $sql7 = "UPDATE ".$event_category." SET event_capacity = event_capacity + 1 WHERE event_id = '$event_id'";

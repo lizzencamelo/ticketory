@@ -16,12 +16,12 @@
                     <ul class="list-unstyled text-muted text-small">
                         <li><a href="#">CONTACT</a></li>
                         <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">LOGIN</a></li>
-                        <li><a href="#">SIGN UP</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#login-modal">LOGIN</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#signup-modal">SIGN UP</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-6  align-self-center text-right">
-                <div class="social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div>
+                <div class="social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div>
                     <p class="small text-muted">ticketory@events.com</p>
                 </div>
             </div>

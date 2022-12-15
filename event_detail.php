@@ -93,7 +93,7 @@
                         </div>
                     </div>
                           
-                    <form method="get" action="api/book_ticket.php">
+                    <form id="booking-details" method="get" action="api/book_ticket.php">
                         <div class="row mt-5">
                             <div class="event-price col-12 d-flex flex-column"><span class="ticket-tag">TICKET PRICE</span><span>&#x20B9; <?= $event_details['event_price'] ?></span></div>
                             <div class="event-quantity mt-3 col-6 d-flex flex-column"><span class="ticket-tag">QUANTITY</span><input type="number" min="1" max="<?=  $event_details['event_capacity'] ?>" id="ticket-quantity" name="ticket-quantity" value="1" oninput="calculateTotalTicketPrice(<?= $event_details['event_price'] ?>)"></div>

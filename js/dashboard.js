@@ -1,10 +1,10 @@
 window.addEventListener("load", function () {
-    var delete_form = document.getElementById("delete-form");
-    delete_form.addEventListener("submit", function (event) {
+    var delete_forms = document.querySelectorAll(".delete-form");
+    delete_forms.forEach(element => element.addEventListener("submit", function (event) {
         if(a = confirm('Are you sure you want to delete the booking?')) {
             console.log(a);
             var XHR = new XMLHttpRequest();
-            var form_data = new FormData(delete_form);
+            var form_data = new FormData(element);
             // On success
             XHR.addEventListener("load", delete_success);
             // On error
@@ -16,7 +16,7 @@ window.addEventListener("load", function () {
     
             event.preventDefault();
         }
-    });
+    }));
 });
 
 var delete_success = (event) => {
