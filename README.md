@@ -2,7 +2,9 @@
 An event booking database management system.
 
 ## Software Tools and Technology
-```HTML ``` 
+```Figma```
+&nbsp;
+```HTML ```
 &nbsp;
 ```CSS```
 &nbsp;
