@@ -51,6 +51,8 @@ An event booking database management system.
 ### Event Detail Page 
 ![event_detail_sports](https://github.com/lizzencamelo/ticketory/blob/main/product/event_detail_sport.png)
 
+## ER Diagram
+![er](https://github.com/lizzencamelo/ticketory/blob/main/product/ER.png)
 
 
 ## Launching website using xampp server
