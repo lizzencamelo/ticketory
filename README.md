@@ -31,6 +31,21 @@ An event booking database management system.
 **Flannan Ferrao**  
 [![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/flannanferrao)
 
+## Objectives
+- The main objective of this project is to develop a user-friendly database management system for storage and retrieval of data.  
+- Provide a secure system with password encryption.  
+- To provide a effortless user experience to booking tickets for events.
+
+## Features
+▪ Viewing various concert/sport events with more information page.  
+▪ User Dashboard for easy viewing of booked tickets.  
+▪ Add/Update/Delete Tickets.  
+▪ Login and sign-up modals using AJAX for interactive communication with the database.  
+▪ Hardened security using sha1 password encryption.  
+▪ Trigger on insertion of record into concerts/sports table to initialize event capacity based on venue capacity.  
+▪ Decrementing event capacity based on booking of tickets and increase in capacity based on cancelation of tickets. Users are unable to book if tickets sold out.  
+▪ Compulsory login/sign up to book tickets.  
+
 ## UI
 
 ### Home Page
